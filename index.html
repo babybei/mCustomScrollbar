@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="jquery.mCustomScrollbar.css">
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery/jquery-1.7.2.min.js"%3E%3C/script%3E'))</script>
+	<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script>!window.jQuery.ui && document.write(unescape('%3Cscript src="jquery/jquery-ui-1.8.21.custom.min.js"%3E%3C/script%3E'))</script>
+	<script src="jquery.mousewheel.min.js"></script>
+	<script src="jquery.mCustomScrollbar.min.js"></script>
+	<style type="text/css">
+	.content{
+		width: 300px; height: 200px; overflow: auto;
+	}
+	</style>
+</head>
+<body>
+	<p>mCustomScrollbar参考地址：http://blog.csdn.net/cdnight/article/details/41351505</p>
+	<div class="content">完成上述的操作之后，带有滚动条的内容块的滚动条，就变成这个插件的默认样式了。 [![使用 mCustomScrollbar 之后的效果图](http://qxzm-img.b0.upaiyun.com/blog/2012/12/1602/scroll2.png "scroll")](http://qxzm-img.b0.upaiyun.com/blog/2012/12/1602/scroll2.png) 官方的默认样式相对于白色的对比度不高，所以为了显示的明显一点，我加了一个深色的背景色。 当然还有很多参数开扩展插件的功能，这些参数的使用方法过后再讲。先来说说上面用到的这些文件的用途和简单介绍： **jQuery**：这个插件的必备库，你懂。 **jQuery UI**：扩展 jQuery 库并且为我们的滚动条提供了简单的动画和拖动功能。 **jquery.mousewheel.min.js**：这是 [Brandon Aaron](http://brandonaaron.net) 编写的一个伟大的只有2kb的插件，它面向所有的操作系统和浏览器，为我们提供了鼠标滚动事件的支持。 **jquery.mCustomScrollbar.js**：这是我们的插件主文件。在插件包的 minified 你可以找到它的压缩版。 **jquery.mCustomScrollbar.css**： 这个 CSS 文件是让我们来定义边栏用的。你可以在这个文件中定义你的边栏，当然你可以在其他的 CSS 文件中定义，要注意的是，你要用 CSS 中的顺序，其中的优先级关系来覆盖这个文件中的定义。否则可能会无效，关于网页中代码顺序，详情可以看一下 [潜行者m](http://www.qianxingzhem.com) 的这篇文章：[网页中代码的顺序是不可忽略的细节](http://www.qianxingzhem.com/post-1539.html)。 **mCSB_buttons.png**： 这个 png 图片文件，包含了向上向下向左向右滚动的按钮。可以使用 CSS sprites 技术，来使用这个图片中的相应按钮。插件包中包含了这个图片的 PSD 源文件（sources/mCSB_buttons.psd ），你可以根据自己的需求自定义。 完成这些，你已经可以正确的使用这个插件，并且看到了相应的效果。但是没有人愿意使用如此强大的插件来实现这个默认的效果，下面来说一下进阶的使用。 ## mCustomScrollbar 的参数介绍 这个插件的功能巨大，所以参数也很多，参数值当然更多。在介绍参数的时候，我想先为新手介绍两种参数值的写法，分别是直接的和合并的。 我 们平时接触的插件用的参数，都是直接跟着参数写上参数值，这个比较直观简单。在这个插件中，参数值太多，所以把一些参数合并起来写。例如下面要介绍到的 scrollButtons 这个参数，它下面有四个属性：enable、scrollType、scrollSpeed、scrollAmount，这四个属性也分别有自己的值，来 实现相应的功能。如果再加上其他的参数，那么我们应该这样写：</div>
+	<script>
+	    (function($){
+	        $(window).load(function(){
+	            $(".content").mCustomScrollbar();
+	        });
+	    })(jQuery);
+	</script>
+</body>
+</html>
